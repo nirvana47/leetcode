@@ -5,21 +5,17 @@ class Solution {
      * exactly one solution, and you may not use the same element twice.
      */
     public int[] twoSum(int[] nums, int target) {
-        int[] sumIndice = new int[2];
+        // int[] sumIndice = new int[2];
 
         for (int i = 0; i < nums.length; i += 1) {
-            for (int j = 0; j < nums.length; j += 1) {
-                if (i == j) {
-                    continue;
-                } else if (nums[i] + nums[j] == target) {
-                    sumIndice[0] = i;
-                    sumIndice[1] = j;
-                    return sumIndice;
+            for (int j = i + 1; j < nums.length; j += 1) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[] { i, j };
                 }
 
             }
         }
-        return sumIndice;
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {
