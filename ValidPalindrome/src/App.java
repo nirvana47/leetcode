@@ -9,19 +9,19 @@ public class App {
         String str3 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
         startTime = System.currentTimeMillis();
-        System.out.println("Str1: " + str1 + " is a valid Palindrome? " + s.isPalindrome(str1));
+        System.out.println("Str1: " + str1 + " is a valid Palindrome? " + s.isPalindrome2(str1));
         endTime = System.currentTimeMillis();
         elapsedTime = endTime - startTime;
         System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
 
         startTime = System.currentTimeMillis();
-        System.out.println("Str2: " + str2 + " is a valid Palindrome? " + s.isPalindrome(str2));
+        System.out.println("Str2: " + str2 + " is a valid Palindrome? " + s.isPalindrome2(str2));
         endTime = System.currentTimeMillis();
         elapsedTime = endTime - startTime;
         System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
 
         startTime = System.currentTimeMillis();
-        System.out.println("Str3: " + str3 + " is a valid Palindrome? " + s.isPalindrome(str3));
+        System.out.println("Str3: " + str3 + " is a valid Palindrome? " + s.isPalindrome2(str3));
         endTime = System.currentTimeMillis();
         elapsedTime = endTime - startTime;
         System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
