@@ -4,7 +4,7 @@ public class App {
         // System.out.println("Hello, World!");
         Solution sol = new Solution();
 
-        int x = 7;
+        int x = 15;
         // int testArr[] = new int[x+1];
         // testArr = sol.countBits(x);
         // System.out.println("What is the meaning of this?");
