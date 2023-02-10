@@ -6,8 +6,8 @@ public class App {
         String str2 = "   fly me   to   the  moon  ";
         String str3 = " a ";
 
-        System.out.println("Str1's last word is " + sol.lengthOfLastWord(str1) + " characters long.");
-        System.out.println("Str2's last word is " + sol.lengthOfLastWord(str2) + " characters long.");
-        System.out.println("Str3's last word is " + sol.lengthOfLastWord(str3) + " characters long.");
+        System.out.println("Str1's last word is " + sol.neetCodeLengthOfLastWord(str1) + " characters long.");
+        System.out.println("Str2's last word is " + sol.neetCodeLengthOfLastWord(str2) + " characters long.");
+        System.out.println("Str3's last word is " + sol.neetCodeLengthOfLastWord(str3) + " characters long.");
     }
 }
