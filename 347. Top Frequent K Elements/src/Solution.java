@@ -96,6 +96,7 @@ class Solution {
         // it. The HashMap is elements mapped to
         // frequencies; now we flip it -- frequencies are mapped to all elements in
         // input array nums to make it easy to find the top k most frequent elements.
+        @SuppressWarnings("unchecked")
         List<Integer> frequencyBucket[] = new ArrayList[nums.length + 1];
         for (int key : frequencyMap.keySet()) {
             int freq = frequencyMap.get(key);
