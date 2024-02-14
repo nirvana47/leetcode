@@ -1,4 +1,24 @@
 public class Solution {
+    public int[] productExceptSelfLessSpace(int[] nums) {
+        int[] finalNums = new int[nums.length];
+        int postfixProduct = 1;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
+                finalNums[i] = 1;
+            } else {
+                finalNums[i] = finalNums[i - 1] * nums[i - 1];
+            }
+        }
+
+        for (int i = nums.length - 1; i >= 0; i--) {
+            finalNums[i] = postfixProduct * finalNums[i];
+            postfixProduct *= nums[i];
+            // finalNums[i] = finalNums[i + 1] * nums[i + 1];
+        }
+        return finalNums;
+    }
+
     public int[] productExceptSelf(int[] nums) {
         int[] prefixNums = new int[nums.length];
         int[] postfixNums = new int[nums.length];
@@ -25,7 +45,6 @@ public class Solution {
             }
             // System.out.print(postfixNums[i] + " ");
         }
-        
 
         // THIRD LOOP, MULTIPLICATION
         for (int i = 0; i < nums.length; i++) {
