@@ -30,7 +30,7 @@ public class App {
         };
 
         answerCheck = sol.isValidSudoku(board3x3Test);
-        System.out.println(answerCheck);
+        System.out.println("Board 3x3 Test: " + answerCheck);
 
     }
 }
