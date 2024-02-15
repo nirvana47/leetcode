@@ -1,18 +1,36 @@
-## Getting Started
+String Encode and Decode
+========================
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Medium
 
-## Folder Structure
+Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
 
-The workspace contains two folders by default, where:
+Please implement `encode` and `decode`
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Example 1:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```
+Input: ["neet","code","love","you"]
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Output:["neet","code","love","you"]
 
-## Dependency Management
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Copy
+
+Example 2:
+
+```
+Input: ["we","say",":","yes"]
+
+Output: ["we","say",":","yes"]
+
+```
+
+Copy
+
+Constraints:
+
+-   `0 <= strs.length < 100`
+-   `0 <= strs[i].length < 200`
+-   `strs[i]` contains only UTF-8 characters.
