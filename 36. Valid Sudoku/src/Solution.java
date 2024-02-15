@@ -26,7 +26,7 @@ public class Solution {
                         isValidCol[boardValue - 1] = true;
                 }
             }
-            System.out.println(j + 1 + " col done");
+            // System.out.println(j + 1 + " col done");
         }
 
         for (int i = 0; i < 9; i += 3) {
@@ -52,6 +52,29 @@ public class Solution {
                 }
             }
         }
+        return true;
+    }
+
+    public boolean onePassIsValidSudoku(char[][] board) {
+        boolean[][] rowCheck = new boolean[9][9];
+        boolean[][] colCheck = new boolean[9][9];
+        boolean[][] boxCheck = new boolean[9][9];
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != '.') {
+                    int num = board[i][j] - '0'; // converts char to int
+                    if (rowCheck[i][num - 1] || colCheck[j][num - 1] || boxCheck[(i / 3) * 3 + j / 3][num - 1]) {
+                        return false;
+                    } else {
+                        rowCheck[i][num - 1] = true;
+                        colCheck[j][num - 1] = true;
+                        boxCheck[(i / 3) * 3 + j / 3][num - 1] = true;
+                    }
+                }
+            }
+        }
+
         return true;
     }
 }

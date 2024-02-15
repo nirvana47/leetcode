@@ -15,7 +15,7 @@ public class App {
                 { '.', '.', '.', '.', '8', '.', '.', '7', '9' }
         };
         boolean answerCheck = sol.isValidSudoku(board);
-        System.out.println(answerCheck);
+        // System.out.println(answerCheck);
 
         char[][] board3x3Test = {
                 { '.', '.', '.', '.', '5', '.', '.', '1', '.' },
@@ -30,7 +30,11 @@ public class App {
         };
 
         answerCheck = sol.isValidSudoku(board3x3Test);
-        System.out.println("Board 3x3 Test: " + answerCheck);
+        // System.out.println("Board 3x3 Test: " + answerCheck);
 
+        answerCheck = sol.onePassIsValidSudoku(board);
+        System.out.println(answerCheck);
+        answerCheck = sol.onePassIsValidSudoku(board3x3Test);
+        System.out.println("Board 3x3 Test: " + answerCheck);
     }
 }
