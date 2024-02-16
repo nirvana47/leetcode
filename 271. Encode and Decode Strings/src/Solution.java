@@ -3,6 +3,9 @@ import java.util.List;
 
 public class Solution {
     public String encode(List<String> strs) {
+        if (strs.isEmpty())
+            return "";
+
         StringBuilder encodedSB = new StringBuilder();
 
         for (String s : strs) {
@@ -20,7 +23,17 @@ public class Solution {
     }
 
     public List<String> decode(String str) {
+        if (str.isEmpty() || str.length() == 0)
+            return new ArrayList<>();
+
         List<String> strList = new ArrayList<>();
+
+        for (int i = 0; i < str.length();) {
+            int strLen = str.charAt(i) - '0'; // convert the char to int
+            strList.add(str.substring(i + 2, i + 2 + strLen));
+            i = i + 2 + strLen;
+        }
+
         return strList;
     }
 }

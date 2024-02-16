@@ -9,8 +9,19 @@ public class App {
         List<String> originalList = Arrays.asList("neet", "code", "love", "you");
 
         Solution sol = new Solution();
-        String encodedStr = sol.encode(originalList);
+        // String encodedStr = sol.encode(originalList);
+        // System.out.println(encodedStr);
 
-        System.out.println(encodedStr);
+        // Encoding
+        String encodedString = sol.encode(originalList);
+        System.out.println("Encoded string: " + encodedString);
+
+        // Decoding
+        List<String> decodedList = sol.decode(encodedString);
+        System.out.println("Decoded list: " + decodedList);
+
+        // Verify if the decoded list matches the original list
+        boolean isTestPassed = originalList.equals(decodedList);
+        System.out.println("Test passed: " + isTestPassed);
     }
 }
