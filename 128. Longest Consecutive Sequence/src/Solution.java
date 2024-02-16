@@ -5,15 +5,6 @@ import java.util.Set;
 public class Solution {
     public int longestConsecutive(int[] nums) {
         int maxCounter = 0;
-        /*
-         * Map<Integer,Integer> numsMap = new HashMap<>();
-         * for (int i : nums) {
-         * if(!numsMap.containsKey(i)) {
-         * numsMap.put(i, 1);
-         * }
-         * }
-         * This is not as efficient, as we don't really care for values
-         */
 
         if (nums.length == 0)
             return 0;
@@ -21,9 +12,9 @@ public class Solution {
             return 1;
 
         Set<Integer> numsSet = new HashSet<>();
-        for (int i : nums) {
+        
+        for (int i : nums)
             numsSet.add(i);
-        }
 
         for (int i : nums) {
             if (!numsSet.contains(i - 1)) {
@@ -33,9 +24,10 @@ public class Solution {
                     i += 1;
                     counter += 1;
                 }
-                if (counter > maxCounter)
-                    maxCounter = counter;
+                maxCounter = Math.max(maxCounter, counter);
             }
+            if (maxCounter > nums.length / 2)
+                break;
         }
 
         return maxCounter;
