@@ -27,11 +27,20 @@ public class Solution {
             return new ArrayList<>();
 
         List<String> strList = new ArrayList<>();
-
-        for (int i = 0; i < str.length();) {
+        
+        /* for (int i = 0; i < str.length();) {
             int strLen = str.charAt(i) - '0'; // convert the char to int
             strList.add(str.substring(i + 2, i + 2 + strLen));
             i = i + 2 + strLen;
+        } */
+
+        int i = 0;
+        while (i < str.length()) {
+            int textCursorPos = str.indexOf(":", i);
+            int wordLen = Integer.parseInt(str.substring(i, textCursorPos));
+            i = textCursorPos + 1;
+            strList.add(str.substring(i, i + wordLen));
+            i += wordLen;
         }
 
         return strList;
