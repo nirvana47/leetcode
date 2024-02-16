@@ -23,4 +23,4 @@ Explanation: The longest consecutive elements sequence is `[1, 2, 3, 4]`. Theref
 #### Constraints:
 
 -   `0 <= nums.length <= 105`
--   `-109 <= nums[i] <= 109`
+-   `-10^9^ <= nums[i] <= 10^9^`
