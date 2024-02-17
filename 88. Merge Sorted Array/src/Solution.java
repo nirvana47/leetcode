@@ -45,12 +45,32 @@ public class Solution {
     }
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+
+        if (m >=1 && n == 0)
+            return;
+        else if (m == 0 && n == 1) {
+            nums1[0] = nums2[0];
+            return;
+        } else if (m == 0 && n == 0) {
+            return;
+        } else if (m == 0 && n > 0) {
+            for (int i = m, j = 0; i < m + n && j < n; i++, j++) {
+                nums1[i] = nums2[j];
+            }
+            return;
+        } else if (nums2[0] >= nums1[m - 1]) {
+            for (int i = m, j = 0; i < m + n && j < n; i++, j++) {
+                nums1[i] = nums2[j];
+            }
+            return;
+        } 
+
         int i = m - 1;
         int j = n - 1;
         int k = m + n - 1;
 
-        while (j >= 0 && i >= 0) {
-            if (nums1[i] > nums2[j]) {
+        while (j >= 0) {
+            if (i >= 0 && nums1[i] > nums2[j]) {
                 nums1[k] = nums1[i];
                 k--;
                 i--;
@@ -60,5 +80,8 @@ public class Solution {
                 j--;
             }
         }
+
+        for (int x : nums1)
+            System.out.println(x);
     }
 }
