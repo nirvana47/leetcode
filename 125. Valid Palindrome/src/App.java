@@ -3,6 +3,8 @@ public class App {
         System.out.println("Hello, World!");
 
         String s = "A man, a plan, a canal: Panama";
+        // String s = "aa";
+        // String s = " ";
         Solution sol = new Solution();
         System.out.println(sol.isPalindrome(s));
     }
